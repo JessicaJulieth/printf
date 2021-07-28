@@ -11,13 +11,13 @@ int _printf(const char *format, ...)
 	unsigned long lenght_fmt = 0;
 	const char *fmt = format;
 	va_list list;
+	int (*f)(va_list);
 
 	va_start(list, format);
 	while (fmt && *fmt)
 	{
 		if (*fmt == '%')
 		{
-			int (*f)(va_list);
 			/* Analizamos el segundo carácter del %*/
 			/* por ejemplo: %d,  analizamos el cáracter d*/
 			fmt++;
@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				write(1, fmt, 1);
+				write(1, &fmt, 1);
 			}
 			fmt++;
 		}

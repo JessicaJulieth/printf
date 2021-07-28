@@ -20,6 +20,7 @@ typedef struct op
 /* C S D I % */
 int op_character(va_list list);
 int op_string(va_list list);
+int op_percent(va_list list);
 int op_integer(va_list list);
 
 /* They are the fuctions principal*/

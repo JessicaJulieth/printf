@@ -20,10 +20,20 @@ int op_character(va_list list)
  */
 int op_string(va_list list)
 {
-	int String = va_arg(list, int);
+	char* String = va_arg(list, char*);
+	int length = 0;
 
-	write(1, &String, 1);
-	return (1);
+	if (String == NULL)
+	{
+		String = "(null)";
+	}
+
+	while (String[length] != '\0')
+	{
+		length++;
+	}
+	write(1, String, length);
+	return (length);
 }
 int op_percent(__attribute__((unused)) va_list list)
 {
