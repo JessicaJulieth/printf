@@ -9,6 +9,7 @@ int (*get_op_func(const char *Character))(va_list)
 	op_t ops[] = {
 		{"c", op_character},
 		{"s", op_string},
+		{"%", op_percent},
 		{NULL, NULL}
 	};
 	int i = 0;
