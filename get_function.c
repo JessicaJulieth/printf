@@ -25,6 +25,14 @@ int op_string(va_list list)
 	write(1, &String, 1);
 	return (1);
 }
+int op_percent(__attribute__((unused)) va_list list)
+{
+	char percent;
+	percent = '%';
+
+	write(1, &percent, 1);
+	return (1);
+}
 /*int op_integer(va_list list)
 {
 	int Integer = va_arg(list, int);
