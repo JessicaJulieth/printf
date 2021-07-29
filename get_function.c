@@ -46,3 +46,4 @@ int op_percent(__attribute__((unused)) va_list list)
     percent = '%';
     write(1, &percent, 1);
     return (1);
+}
