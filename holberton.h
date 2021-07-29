@@ -26,5 +26,5 @@ int op_integer(va_list list);
 /* They are the fuctions principal*/
 int (*get_op_func(const char *Character))(va_list);
 int _printf(const char *format, ...);
-
+int _putchar(char c);
 #endif
