@@ -1,0 +1,65 @@
+.\" Manpage for Own _printf.
+
+.TH man _printf "29 jul 2021" "_Printf manual V 1.0" 
+.SH NAME 
+_printf \- Returns: The number of characters printed (excluding the null byte used to end output to strings).
+.SH SYNOPSIS
+.br 
+#include <holberton.h> [Principal librarie]
+.br
+int op_character(va_list list);
+.br
+int op_string(va_list list);
+.br
+int op_percent(__attribute__((unused)) va_list list);
+.SH DESCRIPTION
+.br
+This function receives arguments different types of data of which can be integers, characters, strings and special characters, previously defined by a format specifier, this data is processed so that it finally shows the output by console..
+.SH Format of the format string
+.br
+.B Format:
+.br
+.br
+"%c", Output Type character.
+.br 
+"%s", Output Type string.
+.br
+"%%", Output Type percent.
+.br
+"%i", Output Type integer. 
+.br
+"%d", Output Type integer. 
+.SH EXAMPLE
+.br
+Print a string using the "%S" format specifier.
+.br
+.br
+#include "holberton.h"
+.br
+int main()
+.br
+{
+.br
+    _printf("String:[%s]\n", "I am a string !");
+.br
+    return(0);
+.br
+}
+.br
+Out = String:[I am a string !]
+.SH RETURN VALUE 
+.br
+Upon successful return, these functions return the number of
+characters printed (excluding the null byte used to end output to
+strings).
+.SH BUGS
+No known bugs for the moment.
+.SH AUTHORS
+.br
+Jessica Sanabria (3497@holbertonschool.com)
+.br
+Julian Carlosama (3392@holbertonschool.com)
+.b
+COPYRIGHT
+.b
+Copyright © 2021 Open Source.
