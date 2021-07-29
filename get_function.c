@@ -7,10 +7,10 @@
  */
 int op_character(va_list list)
 {
-    int Character = va_arg(list, int);
+	int Character = va_arg(list, int);
 
-    write(1, &Character, 1);
-    return (1);
+	write(1, &Character, 1);
+	return (1);
 }
 /**
  * op_string - Fuction that print the string
@@ -20,20 +20,20 @@ int op_character(va_list list)
  */
 int op_string(va_list list)
 {
-    char *String = va_arg(list, char*);
-    int length = 0;
+	char *String = va_arg(list, char*);
+	int length = 0;
 
-    if (String == NULL)
-    {
-        String = "(null)";
-    }
+	if (String == NULL)
+	{
+		String = "(null)";
+	}
 
-    while (String[length] != '\0')
-    {
-        length++;
-    }
-    write(1, String, length);
-    return (length);
+	while (String[length] != '\0')
+	{
+		length++;
+	}
+	write(1, String, length);
+	return (length);
 }
 
 /**
@@ -44,12 +44,12 @@ int op_string(va_list list)
  */
 int op_percent(va_list list)
 {
-    int percent;
+	int percent;
 
-    percent = va_arg(list, int);
-    percent = '%';
-    _putchar(percent);
-    return (1);
+	percent = va_arg(list, int);
+	percent = '%';
+	_putchar(percent);
+	return (1);
 }
 
 /**
@@ -61,5 +61,5 @@ int op_percent(va_list list)
  */
 int _putchar(char c)
 {
-    return (write(1, &c, 1));
+	return (write(1, &c, 1));
 }
