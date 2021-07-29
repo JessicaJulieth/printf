@@ -27,26 +27,31 @@ int _printf(const char *format, ...);
 they should follow these steps:</p>
 
 <p>1. Have vagrant, wsl, visual studio code or a virtual machine.</p>
+
 ```
 sudo apt-get install vagrant
 ```
 
 <p>2. Install a text editor like emacs, vi or sublime text.</p>
+
 ```
 sudo apt-get install emacs
 ```
 
 <p>3. Install the Ubuntu 20.04 LTS compiler.</p>
+
 ```
 sudo apt-get install gcc
 ```
 
 <p>4. Clone the repository.</p>
+
 ```
 git clone https://github.com/JessicaJulieth/printf.git
 ```
 
 <p>5. All files must be compiled with.</p>
+
 ```
 gcc -Wall -Wextra -Werror -pedantic -std = gnu89 -Wno-format * .c
 ```
@@ -54,6 +59,7 @@ gcc -Wall -Wextra -Werror -pedantic -std = gnu89 -Wno-format * .c
 <h3>The most beautiful part of the program 📑 <h3>
 
 <p>When the .c files are compiled with the gcc program, an executable file called a.out is automatically generated, which must be executed with the following command:</p>
+
 ```
 int main()
 {_
