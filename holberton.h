@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <stdio.h>
 
 /**
  * struct op - This is the structure for the print
@@ -16,14 +17,19 @@ typedef struct op
 	int (*function)(va_list);
 } op_t;
 
-/* En este bloque tendremos los protptipos de las funciones de casso */
+/*In this block we will have the prototypes of the casso functions */
 /* C S D I % */
 int op_character(va_list list);
 int op_string(va_list list);
-int op_percent(va_list list);
+/**int op_percent(va_list list);*/
+int op_percent(__attribute__((unused)) va_list list);
 int op_integer(va_list list);
+int print_stranger(va_list list);
+int percentcases(const char *fmt, va_list list);
 
 /* They are the fuctions principal*/
 int (*get_op_func(const char *Character))(va_list);
 int _printf(const char *format, ...);
+int _putchar(char c);
+
 #endif
